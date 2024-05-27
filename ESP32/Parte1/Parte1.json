@@ -1,0 +1,113 @@
+[
+    {
+        "id": "57447eba6c33ed2e",
+        "type": "tab",
+        "label": "Flow 12",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3c26f2c88bb21217",
+        "type": "mqtt out",
+        "z": "57447eba6c33ed2e",
+        "name": "",
+        "topic": "NoIoT-B4:E6:2D:86:C2:E9",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7ef59e109940f9ee",
+        "x": 470,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4c0813d5ce109a19",
+        "type": "inject",
+        "z": "57447eba6c33ed2e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Olá",
+        "payloadType": "str",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "3c26f2c88bb21217"
+            ]
+        ]
+    },
+    {
+        "id": "d93c0533eb35761c",
+        "type": "mqtt in",
+        "z": "57447eba6c33ed2e",
+        "name": "",
+        "topic": "NoIoT-B4:E6:2D:86:C2:E9",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "7ef59e109940f9ee",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "f06793cabe879dc0"
+            ]
+        ]
+    },
+    {
+        "id": "f06793cabe879dc0",
+        "type": "debug",
+        "z": "57447eba6c33ed2e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7ef59e109940f9ee",
+        "type": "mqtt-broker",
+        "name": "Mr. Maldoror",
+        "broker": "mrmaldoror.hopto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]
