@@ -3,10 +3,8 @@
 // Código para testar a comunicação usando protocolo MQTT
 // Placa: "ESP32 Dev Module"
 //
-// Adaptado de "Exemplos/Blink"
-//
 // Depois de compilado e carregado para a plataforma de desenvolvimento ESP32,
-// o ESP32 faz eco da mensagem enviada para o tópico /RedesInteligentes/.
+// o ESP32 faz eco da mensagem enviada para o tópico "NoIoT-XX:XX:XX:XX:XX:XX.
 //
 // 2023/2024
 #include <WiFi.h>
