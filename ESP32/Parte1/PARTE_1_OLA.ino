@@ -30,8 +30,6 @@ PubSubClient client(espClient);                   // Cria objeto MQTT
 //-------------------------------------------------------------------
 void setup() {
   Serial.begin(115200);                           // Define interface de comunicação série
-  id_do_cliente += String(WiFi.macAddress());     // MAC tem 6 bytes + 5 separadores
-  Serial.printf("Olá. Sou o nó %s\n", id_do_cliente.c_str());
   //-----------------------------------------------------------------
   // Estabelece ligação WiFi
   //-----------------------------------------------------------------
@@ -42,6 +40,11 @@ void setup() {
     Serial.print(".");
   }
   Serial.println("concluído.");
+  //--------------------------------------------------------------------
+  // ID do nó
+  //-------------------------------------------------------------------- 
+  id_do_cliente += String(WiFi.macAddress());     // MAC tem 6 bytes + 5 separadores
+  Serial.printf("Olá. Sou o nó %s\n", id_do_cliente.c_str());
   //--------------------------------------------------------------------
   // Define broker MQTT, porto de escuta e rotina de callback
   //--------------------------------------------------------------------
